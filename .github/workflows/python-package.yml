@@ -12,19 +12,19 @@ on:
 
 jobs:
 
-  update-version:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: master
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
+#  update-version:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v4
+#        with:
+#          ref: master
+#          fetch-depth: 0
+#
+#      - name: Set up Python
+#        uses: actions/setup-python@v5
+#        with:
+#          python-version: "3.10"
 
 #      - name: Update version.py
 #        run: |
@@ -55,7 +55,7 @@ jobs:
 #          git push origin HEAD:master
 
   build:
-    needs: [ update-version ]
+#    needs: [ update-version ]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
